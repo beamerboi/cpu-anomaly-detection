@@ -1,0 +1,15 @@
+{
+  "model_name": "SVM",
+  "metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0
+  },
+  "selection_criteria": {
+    "primary_metric": "f1",
+    "min_recall": 0.7,
+    "min_precision": 0.5
+  }
+}
