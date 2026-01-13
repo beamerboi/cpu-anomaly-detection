@@ -7,13 +7,13 @@ ANOMALY DETECTION MODEL TRAINING REPORT
 
 Model                       Accuracy  Precision     Recall         F1    ROC_AUC
 ---------------------------------------------------------------------------
-SVM                           1.0000     1.0000     1.0000     1.0000     1.0000 *
+RandomForest                  1.0000     1.0000     1.0000     1.0000     1.0000 *
+SVM                           1.0000     1.0000     1.0000     1.0000     1.0000
+GradientBoosting              1.0000     1.0000     1.0000     1.0000     1.0000
 LogisticRegression            1.0000     1.0000     1.0000     1.0000     1.0000
-RandomForest                  0.9630     1.0000     0.9231     0.9600     1.0000
-MLP                           0.9630     1.0000     0.9231     0.9600     0.9890
-XGBoost                       0.9259     0.9231     0.9231     0.9231     0.9615
-IsolationForest               0.8889     0.8125     1.0000     0.8966     0.9451
-GradientBoosting              0.8889     0.9167     0.8462     0.8800     0.9396
+MLP                           1.0000     1.0000     1.0000     1.0000     1.0000
+XGBoost                       1.0000     1.0000     1.0000     1.0000     1.0000
+IsolationForest               1.0000     1.0000     1.0000     1.0000     1.0000
 
 * = Selected best model
 
@@ -21,19 +21,19 @@ GradientBoosting              0.8889     0.9167     0.8462     0.8800     0.9396
 2. DETAILED METRICS FOR BEST MODEL
 ----------------------------------------------------------------------
 
-Model: SVM
+Model: RandomForest
 
 Confusion Matrix:
                  Predicted
               Normal  Anomaly
-Actual Normal      14        0
-       Anomaly      0       13
+Actual Normal       3        0
+       Anomaly      0        3
 
 
 3. MODEL SELECTION RATIONALE
 ----------------------------------------------------------------------
 
-The SVM model was selected as the best model based on:
+The RandomForest model was selected as the best model based on:
 - Highest F1 score among models meeting recall/precision thresholds
 - F1 score balances precision and recall, important for anomaly detection
 - Model successfully identifies anomalies while minimizing false alarms
